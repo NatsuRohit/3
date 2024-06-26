@@ -94,3 +94,35 @@ elif choose==4:
 else:
     print("We dont have other drinks at the moment.")
     exit()
+
+print("Delivery Option: 1.Home(Rs:500) 2.Pickup(Rs:0)")
+delivery_price=0
+delivery_option=int(input("Choose the delivery option:\t"))
+if delivery_option==1:
+    delivery_price=500
+
+print("Packing Option: 1.Polythene(Rs:50) 2.Bag(Rs:100) 3.Cart(Rs.250)")
+packing_price=0
+packing_option=int(input("Choose a packing option:\t"))
+if packing_option==1:
+    packing_price=50
+elif packing_option==2:
+    packing_price=100
+elif packing_option==3:
+    packing_price=250
+
+total_price=coke_price+fanta_price+mountain_dew_price+sprite_price
+
+print("Location: 1.KTM(Rs:13%) 2.Lalitpur(Rs:10%) 3.Bhaktapur(Rs:11%)")
+tax_amount=0
+location=int(input("Choose your location:\t"))
+if location==1:
+    total_price=total_price*0.13
+elif location==2:
+    total_price=total_price*0.10
+elif location==3:
+    total_price=total_price*0.11
+
+grand_total=total_price+tax_amount+delivery_price+packing_price
+
+
